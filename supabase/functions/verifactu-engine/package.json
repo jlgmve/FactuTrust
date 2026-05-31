@@ -1,0 +1,18 @@
+{
+  "name": "factutrust-verifactu-engine",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.js"
+  },
+  "dependencies": {
+    "xmlbuilder2": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.0",
+    "typescript": "^5.5.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^22.0.0"
+  }
+}
