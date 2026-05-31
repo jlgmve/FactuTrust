@@ -13,7 +13,7 @@
  * since the year is embedded in the number format.
  */
 
-import type { InvoiceNumberInput, InvoiceNumberResult } from './types.js';
+import type { InvoiceNumberInput, InvoiceNumberResult } from './types.ts';
 
 /**
  * Default prefix used when none is configured.

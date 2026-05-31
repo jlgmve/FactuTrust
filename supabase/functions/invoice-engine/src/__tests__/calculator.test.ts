@@ -26,9 +26,9 @@ import {
   calculateDueDate,
   validateLineInput,
   validateInvoiceInputs,
-} from '../calculator.js';
+} from '../calculator.ts';
 
-import type { InvoiceLine } from '../types.js';
+import type { InvoiceLine } from '../types.ts';
 
 // ---------------------------------------------------------------------------
 // roundMoney

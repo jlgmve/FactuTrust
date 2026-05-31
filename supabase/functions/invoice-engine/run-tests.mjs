@@ -16,9 +16,9 @@ import {
     calculateDueDate,
     validateLineInput,
     validateInvoiceInputs,
-} from './src/calculator.js';
+} from './src/calculator.ts';
 
-import { generateInvoiceNumber, parseSequence } from './src/invoice-number.js';
+import { generateInvoiceNumber, parseSequence } from './src/invoice-number.ts';
 
 let passed = 0;
 let failed = 0;

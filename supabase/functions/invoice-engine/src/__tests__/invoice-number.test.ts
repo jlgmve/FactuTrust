@@ -10,7 +10,7 @@
  *   - parseSequence utility
  */
 
-import { generateInvoiceNumber, parseSequence } from '../invoice-number.js';
+import { generateInvoiceNumber, parseSequence } from '../invoice-number.ts';
 
 // ---------------------------------------------------------------------------
 // generateInvoiceNumber

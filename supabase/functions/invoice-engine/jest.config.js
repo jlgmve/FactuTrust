@@ -10,6 +10,8 @@ export default {
       {
         useESM: true,
         tsconfig: {
+          allowImportingTsExtensions: true,
+          noEmit: true,
           module: 'ESNext',
           moduleResolution: 'bundler',
           target: 'ES2022',

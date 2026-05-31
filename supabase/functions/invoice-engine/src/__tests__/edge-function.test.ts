@@ -7,12 +7,9 @@
  *   - Error responses for unknown actions
  */
 
-import { handleRequest } from '../edge-function.js';
-import type {
-  InvoiceEngineSuccessResponse,
-  InvoiceCalculation,
-  InvoiceNumberResult,
-} from '../edge-function.js';
+import { handleRequest } from '../edge-function.ts';
+import type { InvoiceEngineSuccessResponse } from '../edge-function.ts';
+import type { InvoiceCalculation, InvoiceNumberResult } from '../types.ts';
 
 // ---------------------------------------------------------------------------
 // Helpers

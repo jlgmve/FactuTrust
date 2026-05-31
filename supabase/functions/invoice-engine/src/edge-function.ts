@@ -20,9 +20,9 @@
  *   Body: { action: "calculate", lines: [...] }
  */
 
-import { calculateInvoice, validateInvoiceInputs } from './calculator.js';
-import { generateInvoiceNumber } from './invoice-number.js';
-import type { InvoiceCalculation, InvoiceNumberInput, InvoiceNumberResult } from './types.js';
+import { calculateInvoice, validateInvoiceInputs } from './calculator.ts';
+import { generateInvoiceNumber } from './invoice-number.ts';
+import type { InvoiceLineInput, InvoiceCalculation, InvoiceNumberInput, InvoiceNumberResult } from './types.ts';
 
 // ---------------------------------------------------------------------------
 // Request / Response types
@@ -77,7 +77,7 @@ export type InvoiceEngineResponse =
  */
 function handleCalculate(req: CalculateRequest): InvoiceEngineResponse {
   // Validate inputs
-  const validationErrors = validateInvoiceInputs(req.lines);
+  const validationErrors = validateInvoiceInputs(req.lines as Partial<InvoiceLineInput>[]);
   if (validationErrors.length > 0) {
     return {
       success: false,
@@ -192,7 +192,7 @@ export default async function (req: Request): Promise<Response> {
   }
 
   try {
-    const body: InvoiceEngineRequest = await req.json();
+    const body: InvoiceEngineRequest = await req.json() as InvoiceEngineRequest;
     const result = handleRequest(body);
 
     const status = result.success ? 200 : 400;

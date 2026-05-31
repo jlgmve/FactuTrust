@@ -24,7 +24,7 @@ import type {
   InvoiceLine,
   InvoiceCalculation,
   TaxSummaryEntry,
-} from './types.js';
+} from './types.ts';
 
 // ---------------------------------------------------------------------------
 // Precision helpers
@@ -41,8 +41,10 @@ import type {
  *   - NaN/Infinity inputs are caught upstream by validation.
  */
 export function roundMoney(value: number): number {
-  // Multiply by 100, round to nearest integer, divide by 100
-  return Math.round(value * 100) / 100;
+  // Use exponential notation to avoid floating-point precision issues
+  // with values like 1.005. This reliably rounds half-up to 2 decimal places.
+  const rounded = Number(Math.round(Number(value + 'e+2')) + 'e-2');
+  return rounded;
 }
 
 /**
