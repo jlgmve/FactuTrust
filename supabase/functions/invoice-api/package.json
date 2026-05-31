@@ -1,0 +1,27 @@
+{
+  "name": "factutrust-invoice-engine",
+  "version": "1.0.0",
+  "description": "FactuTrust Invoice Calculation Engine — core tax and pricing logic for Spanish freelancers/SMEs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.js",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.0",
+    "typescript": "^5.5.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^22.0.0"
+  }
+}

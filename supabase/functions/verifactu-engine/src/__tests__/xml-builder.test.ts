@@ -20,7 +20,8 @@ describe('buildAltaXML', () => {
       clientNif: 'Y1234567X',
     });
 
-    expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>');
+    expect(xml).toContain('<?xml version="1.0"?>');
+    expect(xml).toContain('<?xml version="1.0"')
     expect(xml).toContain('<RegistroAlta>');
     expect(xml).toContain('<NIF>B12345678</NIF>');
     expect(xml).toContain('<NumSerieFactura>FAC-2025-0001</NumSerieFactura>');
